@@ -1,0 +1,14 @@
+import csv
+csv_file = input('Enter the name of your input file: ')
+csv_file1 = input('Enter the name of your output file ')
+#txxt_file = input('Enter the name of your output file 2:')
+with open(csv_file1, "w") as my_output_file:
+    with open(csv_file, "r") as my_input_file:
+        reader = csv.reader(open(csv_file, "rU"), delimiter=';')
+        writer = csv.writer(open(csv_file1, 'w'), delimiter=',')
+        writer.writerows(reader)
+    my_output_file.close()
+
+    
+
+
